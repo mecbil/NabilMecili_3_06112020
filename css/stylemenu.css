@@ -1,0 +1,133 @@
+/* General */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: "Raleway", sans-serif;
+  font-size: 62.5%;
+}
+
+.container {
+  max-width: 375px;
+  margin: auto;
+}
+
+.logo {
+  width: 50%;
+  padding: 1em 0;
+}
+
+h1 {
+  font-size: 2em;
+  font-family: sans-serif;
+  font-style: italic;
+}
+h1 i {
+  margin-left: 8em;
+}
+h1 i:hover {
+  color: blue;
+}
+
+h6 {
+  width: 2em;
+  padding-top: 2em;
+  padding-bottom: 0.2em;
+  margin-bottom: 2em;
+  font-size: 1.5em;
+  font-family: sans-serif;
+  border-bottom: 0.2em solid #99E2D0;
+}
+
+h4 {
+  padding: 0.5em 1em;
+  font-size: 1.5em;
+}
+
+p {
+  padding-left: 1.5em;
+  padding-bottom: 1em;
+  font-size: 1.2em;
+  margin-bottom: 1em;
+}
+p span {
+  position: absolute;
+  left: 82%;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+/* --------------------------------------- */
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+header img {
+  width: 100%;
+  padding: 1em 0;
+  margin-left: 1em;
+}
+
+main img {
+  width: 100%;
+}
+main section {
+  background-color: #F2F2F2;
+  border-radius: 4em 4em 0% 0%;
+  position: relative;
+  top: -4em;
+  padding-left: 2em;
+  padding-top: 3em;
+}
+main section article {
+  width: 96%;
+  border-radius: 1em;
+  background-color: white;
+}
+main section .btn {
+  border-radius: 5em;
+  background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  color: white;
+  padding: 0.8em;
+  font-size: 1.7em;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+  background-color: #292b2c;
+}
+footer img {
+  padding-top: 2em;
+  padding-left: 1em;
+  width: 30%;
+  filter: invert(100%);
+  padding-bottom: 2em;
+}
+footer a {
+  color: white;
+  font-size: 1.4em;
+  padding-bottom: 0.6em;
+  padding-left: 1em;
+}
+footer a:last-child {
+  margin-bottom: 1.4em;
+}
+footer a:nth-child(2) i {
+  font-size: 1.3em;
+  padding-right: 0.3em;
+}
+footer a:nth-child(3) i {
+  padding-right: 0.2em;
+}
+
+/*# sourceMappingURL=stylemenu.css.map */
