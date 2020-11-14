@@ -5,33 +5,48 @@
 }
 
 html {
-  font-family: "Raleway", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 62.5%;
 }
 
 .container {
-  max-width: 375px;
+  width: 375px;
   margin: auto;
 }
 
 h2 {
+  font-weight: 200;
   font-size: 2em;
-  margin-bottom: 2em;
+  font-weight: 100;
+  margin-bottom: 1em;
 }
 
 h3 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
   font-size: 1.5em;
   padding: 0.5em 0.5em;
 }
 
 h4 {
+  font-family: "Roboto", sans-serif;
   font-size: 1.1em;
   padding-left: 0.8em;
 }
 
+h5 {
+  font-size: 2.6em;
+  text-align: center;
+  width: 70%;
+  font-weight: bold;
+  padding-bottom: 0.5em;
+}
+
 .logo {
-  width: 50%;
-  padding: 1em 0;
+  font-family: "Shrikhand", cursive;
+  font-weight: 300;
+  font-size: 3em;
+  padding-top: 0.5em;
 }
 
 a {
@@ -41,21 +56,28 @@ a {
 
 /* --------------------------------------- */
 header {
-  display: block;
   text-align: center;
-  width: 100%;
-}
-header img {
-  width: 100%;
-  padding: 1em 0;
 }
 
+main form:focus-within {
+  padding-top: 0;
+}
+main form:focus-within .fa-map-marker-alt {
+  display: none;
+}
+main .fa-map-marker-alt {
+  position: relative;
+  font-size: 1.5em;
+  top: 1.7em;
+  left: 32%;
+}
 main input {
   width: 100%;
   height: 3em;
   text-align: center;
-  background-color: #e0dfdf;
+  background-color: #cccaca;
   border: 0;
+  color: black;
 }
 main img {
   width: 100%;
@@ -72,10 +94,10 @@ main .Decouvrir {
   padding: 3em 0;
 }
 main .Decouvrir h1 {
+  font-family: "Shrikhand", cursive;
   font-size: 2em;
   width: 60%;
   text-align: center;
-  padding-bottom: 1em;
 }
 main .Decouvrir p {
   color: gray;
@@ -91,17 +113,11 @@ main .Decouvrir a {
   padding: 0.8em;
   font-size: 1.7em;
   border-bottom: 3px solid grey;
-  transition: all 0.1s;
-  float: right;
   cursor: pointer;
-}
-main .Decouvrir a:active {
-  transform: translate(0, 5px);
-  border-bottom: 1px;
 }
 main .Fonction {
   padding: 3em 2em 0em 2em;
-  margin-bottom: 5em;
+  margin-bottom: 4em;
 }
 main .Fonction p {
   background-color: #F2F2F2;
@@ -160,12 +176,10 @@ footer {
   width: 100%;
   background-color: #292b2c;
 }
-footer img {
-  padding-top: 2em;
-  padding-left: 1em;
-  width: 30%;
-  filter: invert(100%);
-  padding-bottom: 2em;
+footer .logo {
+  font-size: 2em;
+  color: white;
+  padding-left: 0.6em;
 }
 footer a {
   color: white;
@@ -182,6 +196,19 @@ footer a:nth-child(2) i {
 }
 footer a:nth-child(3) i {
   padding-right: 0.2em;
+}
+
+@media screen and (min-width: 600px) and (max-width: 900px) {
+  .container {
+    width: 600;
+    margin: auto;
+  }
+}
+@media screen and (min-width: 901px) {
+  .container {
+    width: 901;
+    margin: auto;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
