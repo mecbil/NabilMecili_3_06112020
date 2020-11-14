@@ -19,13 +19,12 @@ html{
     font-size: 3em;
     padding: 0.2em;
 }
-h1{
+h1,h2{
     font-family: 'Shrikhand', cursive;
     font-weight: 300;
     font-size: 2.5em;
-    
-    
 }
+
 
 h6{
     font-weight: 100;
@@ -246,13 +245,13 @@ footer{
 
 @media screen and (min-width: 600px) and (max-width: 900px){
     .container{
-        width : 600;
+        width : 600px;
         margin : auto;
     }
 }
 @media screen and (min-width: 901px) {
     .container{
-        width : 901;
+        width : 901px;
         margin : auto;
     }
 }
