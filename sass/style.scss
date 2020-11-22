@@ -211,7 +211,7 @@ main{
         }
         .scaler{
         
-        width: 17.44em;
+        width: 17.4em;
         border-radius: 5em;
         display: flex;
         justify-content: center;
@@ -229,7 +229,9 @@ main{
             border-radius: 5em;
             background-image: linear-gradient(to bottom right, $Secondaire,$Primaire);
             color: white;
-            padding: 0.8em ;
+            padding: 0.8em 0 ;
+            width: 100%;
+            
             font-size: 1.4em;
             cursor: pointer; 
            
