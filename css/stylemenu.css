@@ -130,11 +130,13 @@ main section .fa-heart {
   font-size: 1em;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke: 1px black;
+  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  height: 0%;
 }
 main section .fa-heart:hover {
-  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  transition: all 10s ease;
+  height: 4%;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   -webkit-text-stroke: 0px black;
 }
 main section article {

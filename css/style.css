@@ -9,52 +9,65 @@ html {
   font-size: 62.5%;
 }
 
-.spinner {
-  width: 40px;
-  height: 40px;
-  background-color: #1f71ec;
-  margin: 100px auto;
-  -webkit-animation: sk-rotateplane 1.2s ease-in-out;
-  animation: sk-rotateplane 1.2s ease-in-out;
-  animation-iteration-count: 4;
+.loader_bg {
   position: absolute;
-  top: -2.5em;
-  left: 35em;
-  transform: translateY(-25em);
+  width: 100%;
+  height: 150em;
+  background: white;
+  z-index: -10;
+  animation: charger 8s linear;
+}
+@-webkit-keyframes charger {
+  0% {
+    z-index: 10;
+  }
+  100% {
+    z-index: -10;
+  }
+}
+.loader_bg .loader {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #9356DC;
+  border-right: 16px solid #FF79DA;
+  border-bottom: 16px solid #99E2D0;
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  left: 41%;
+  top: 30em;
+  visibility: collapse;
+  -webkit-animation: spin 4s linear;
+  animation: spin 4s linear;
+}
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    visibility: visible;
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    visibility: collapse;
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+    visibility: visible;
+  }
+  100% {
+    transform: rotate(360deg);
+    visibility: collapse;
+  }
 }
 
-@-webkit-keyframes sk-rotateplane {
-  0% {
-    -webkit-transform: perspective(120px);
-  }
-  50% {
-    -webkit-transform: perspective(120px) rotateY(180deg);
-  }
-  100% {
-    -webkit-transform: perspective(120px) rotateY(180deg) rotateX(180deg);
-  }
-}
-@keyframes sk-rotateplane {
-  0% {
-    transform: perspective(120px) rotateX(0deg) rotateY(0deg);
-    -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg);
-  }
-  50% {
-    transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
-    -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
-  }
-  100% {
-    transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
-    -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
-  }
-}
 .container {
   width: 375px;
   margin: auto;
 }
 @media screen and (min-width: 600px) and (max-width: 900px) {
   .container {
-    width: 600px;
+    width: 100%;
   }
 }
 @media screen and (min-width: 901px) {
@@ -145,25 +158,23 @@ main {
   /* Fonctionnement */
   /* -------------------------------------------------------------------------------------- */
 }
-main form:focus-within {
-  padding-top: 0;
-}
-main form:focus-within .fa-map-marker-alt {
-  display: none;
-}
-main .fa-map-marker-alt {
-  position: relative;
-  font-size: 1.5em;
-  top: 1.7em;
-  left: 32%;
-}
-main input {
+main form {
   width: 100%;
   height: 3em;
   text-align: center;
   background-color: #cccaca;
   border: 0;
-  color: black;
+}
+main form .fa-map-marker-alt {
+  font-size: 1.5em;
+  padding-right: 0.5em;
+  margin-left: 3.5em;
+}
+main form input {
+  color: #636060;
+  height: 100%;
+  border: 0;
+  background-color: #cccaca;
 }
 main .Decouvrir {
   background-color: #F2F2F2;
@@ -191,18 +202,32 @@ main .Decouvrir p {
   padding-bottom: 2em;
   margin: 0 auto;
 }
+main .Decouvrir .scaler {
+  width: 17.44em;
+  border-radius: 5em;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  box-shadow: 0.5px 0.5px 2px #9356DC, -0.5px -0.5px 2px #FF79DA;
+  margin: auto;
+}
+main .Decouvrir .scaler:hover {
+  transition: all 0.3s linear;
+  transform: scale(1.1);
+  box-shadow: 0.5px 0.5px 7px #9356DC, -0.5px -0.5px 7px #FF79DA;
+}
 main .Decouvrir a {
   border-radius: 5em;
   background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
   color: white;
   padding: 0.8em;
-  font-size: 1.7em;
-  border-bottom: 3px solid grey;
+  font-size: 1.4em;
   cursor: pointer;
 }
 main .Decouvrir .slides {
   visibility: collapse;
-  width: 600px;
+  width: 100%;
   height: 26em;
   animation: glisse ease-in-out 10s infinite;
 }
@@ -307,10 +332,25 @@ main #restaurants article {
     width: 45%;
   }
 }
+main #restaurants article p {
+  background-color: #99E2D0;
+  color: #037457c4;
+  font-weight: bold;
+  width: 60px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-bottom: -20px;
+  top: 1em;
+  left: 75%;
+}
 main #restaurants article img {
   width: 100%;
   height: 15em;
   border-radius: 1em 1em 0 0;
+  object-fit: cover;
 }
 main #restaurants article i {
   position: relative;
@@ -319,11 +359,14 @@ main #restaurants article i {
   font-size: 2em;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke: 1px black;
+  -webkit-background-clip: text;
+  height: 0%;
+  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
 }
 main #restaurants article i:hover {
-  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  transition: all 2s ease;
+  height: 10%;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   -webkit-text-stroke: 0px black;
 }
 
