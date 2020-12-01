@@ -12,10 +12,10 @@ html {
 .loader_bg {
   position: absolute;
   width: 100%;
-  height: 120em;
+  height: 190em;
   background: white;
   z-index: -10;
-  animation: charger 8s linear;
+  animation: charger 4s linear;
 }
 @-webkit-keyframes charger {
   0% {
@@ -23,6 +23,16 @@ html {
   }
   100% {
     z-index: -10;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 666px) {
+  .loader_bg {
+    height: 179em;
+  }
+}
+@media screen and (min-width: 667px) {
+  .loader_bg {
+    height: 130em;
   }
 }
 .loader_bg .loader {
@@ -37,8 +47,8 @@ html {
   left: 41%;
   top: 30em;
   visibility: collapse;
-  -webkit-animation: spin 4s linear;
-  animation: spin 4s linear;
+  -webkit-animation: spin 2s linear;
+  animation: spin 2s linear;
 }
 @-webkit-keyframes spin {
   0% {
@@ -65,14 +75,10 @@ html {
   width: 375px;
   margin: auto;
 }
-@media screen and (min-width: 600px) and (max-width: 900px) {
+@media screen and (min-width: 600px) {
   .container {
-    width: 100%;
-  }
-}
-@media screen and (min-width: 901px) {
-  .container {
-    width: 900px;
+    width: 90%;
+    margin: auto;
   }
 }
 
@@ -107,7 +113,8 @@ h5 {
 }
 @media screen and (min-width: 600px) {
   h5 {
-    text-shadow: 1px 2px white;
+    color: #99E2D0;
+    text-shadow: 2px 2px black;
   }
 }
 
@@ -163,7 +170,6 @@ main {
   /* -------------------------------------------------------------------------------------- */
 }
 main form {
-  width: 100%;
   height: 3em;
   text-align: center;
   background-color: #cccaca;
@@ -208,7 +214,9 @@ main .Decouvrir p {
 }
 @media screen and (min-width: 600px) {
   main .Decouvrir p {
-    text-shadow: 1px 1px #333133;
+    color: white;
+    font-weight: bold;
+    text-shadow: 1px 1px black;
   }
 }
 main .Decouvrir .scaler {
@@ -216,13 +224,14 @@ main .Decouvrir .scaler {
   border-radius: 5em;
   display: flex;
   justify-content: center;
-  box-shadow: 0.2px 0.2px 4px #9356DC, -0.5px -0.5px 2px #FF79DA;
+  box-shadow: 0.1em 0.1em 0.4em #9356DC, -0.1em -0.1em 0.4em #FF79DA;
   margin: auto;
 }
 main .Decouvrir .scaler:hover {
   transition: all 0.3s linear;
+  filter: brightness(90%);
   transform: scale(1.1);
-  box-shadow: 0.8px 0.8px 12px #9356DC, -0.5px -0.5px 7px #FF79DA;
+  box-shadow: 0.3em 0.3em 0.8em #9356DC, -0.3em -0.3em 0.8em #FF79DA;
 }
 main .Decouvrir a {
   border-radius: 5em;
@@ -252,12 +261,11 @@ main .Decouvrir .slides img {
 }
 @media screen and (min-width: 901px) {
   main .Decouvrir .slides {
-    width: 900px;
     visibility: visible;
   }
 }
 main .Fonction {
-  padding: 3em 2em 0em 2em;
+  padding: 3em 0em 0em 1em;
   margin-bottom: 4em;
 }
 @media screen and (min-width: 600px) {
@@ -278,15 +286,17 @@ main .Fonction p {
 @media screen and (min-width: 600px) and (max-width: 800px) {
   main .Fonction p {
     margin: 0;
-    font-size: 1.4em;
-    padding-top: 1em;
+    font-size: 1.3em;
+    padding-top: 1.2em;
     width: 13em;
   }
 }
 @media screen and (min-width: 801px) {
   main .Fonction p {
-    width: 12.8em;
+    width: 13.2em;
+    font-size: 1.6em;
     padding: 1em 0.5em;
+    margin: 0;
   }
 }
 main .Fonction p span {
@@ -318,11 +328,18 @@ main #restaurants {
   background-color: #F2F2F2;
   padding: 3em 2em 3em 2em;
 }
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 600px) and (max-width: 978px) {
   main #restaurants {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 978px) {
+  main #restaurants {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
   }
 }
 main #restaurants article {
@@ -335,7 +352,7 @@ main #restaurants article {
 }
 @media screen and (min-width: 600px) {
   main #restaurants article {
-    width: 25em;
+    width: 27em;
   }
 }
 main #restaurants article p {
