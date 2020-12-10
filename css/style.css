@@ -30,9 +30,14 @@ html {
     height: 179em;
   }
 }
-@media screen and (min-width: 667px) {
+@media screen and (min-width: 667px) and (max-width: 1289px) {
   .loader_bg {
     height: 130em;
+  }
+}
+@media screen and (min-width: 1290px) {
+  .loader_bg {
+    height: 105em;
   }
 }
 .loader_bg .loader {

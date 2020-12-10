@@ -26,16 +26,13 @@ html{
     @media screen and (min-width:600px) and (max-width:666px){
         height:179em ;
     }
-    @media screen and (min-width:667px) {
+    @media screen and (min-width:667px) and (max-width:1289px){
         height:130em ;
     }
-    // @media screen and (min-width:801px) and (max-width:977px){
-    //     height:130em ;
-    // }
-    // @media screen and (min-width:978px) {
-    //     height:130em ;
-    // }
-   
+    @media screen and (min-width:1290px) {
+        height:105em ;
+    }
+
     .loader {
         border: 16px solid #f3f3f3;
         border-radius: 50%;
@@ -225,7 +222,6 @@ main{
         &:hover{
             transition: all 0.3s linear;
             filter: brightness(90%);
-            // opacity: 0.9;
             transform: scale(1.1);
             box-shadow: .3em .3em 0.8em $Primaire,-.3em -.3em 0.8em $Secondaire;
         }
@@ -343,9 +339,7 @@ main{
             @media screen and (min-width:600px) {
                 width: 27em;
             }
-            // @media screen and (min-width:761px){
-            //     width: 35em;
-            // }
+
             p{
                 background-color: $Ternaire;
                 color: #037457c4;
